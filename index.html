@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Speed Test</title>
+    <meta name="description" content="Test your internet connection speed with this fast.com clone">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>FAST</h1>
+                <div class="language-selector" role="group" aria-label="Language selector">
+                    <button class="language-btn" data-lang="en" aria-pressed="true">EN</button>
+                    <button class="language-btn" data-lang="it" aria-pressed="false">IT</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="speed-test-container">
+                <div class="speed-test-loading" id="loading" aria-live="polite">
+                    <div class="spinner" role="progressbar" aria-label="Testing internet speed"></div>
+                    <p class="loading-text" data-i18n="checking">Checking internet speed...</p>
+                </div>
+
+                <div class="speed-test-result" id="result" tabindex="0" role="button" aria-label="Click to restart test">
+                    <div class="speed-value-container">
+                        <span class="speed-value" id="download-speed">0</span>
+                        <span class="speed-unit" data-i18n="mbps">Mbps</span>
+                    </div>
+                    <p class="speed-label" data-i18n="download-speed">Your internet speed</p>
+                    <p class="restart-hint" data-i18n="restart-hint">(Click to restart test)</p>
+                </div>
+
+                <div class="more-info-toggle">
+                    <button id="more-info-btn" data-i18n="show-more" aria-expanded="false" aria-controls="additional-metrics">SHOW MORE INFO</button>
+                </div>
+
+                <div class="additional-metrics" id="additional-metrics" aria-hidden="true">
+                    <div class="metric">
+                        <span class="metric-label" data-i18n="upload">UPLOAD</span>
+                        <div class="metric-value">
+                            <span id="upload-speed">0</span>
+                            <span class="speed-unit" data-i18n="mbps">Mbps</span>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label" data-i18n="latency-unloaded">LATENCY UNLOADED</span>
+                        <div class="metric-value">
+                            <span id="latency-unloaded">0</span>
+                            <span class="speed-unit" data-i18n="ms">ms</span>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label" data-i18n="latency-loaded">LATENCY LOADED</span>
+                        <div class="metric-value">
+                            <span id="latency-loaded">0</span>
+                            <span class="speed-unit" data-i18n="ms">ms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="powered-by">
+                <span data-i18n="powered-by">A clone of</span> 
+                <a href="https://fast.com" target="_blank" rel="noopener noreferrer">fast.com</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/language.js" defer></script>
+    <script src="js/speedtest.js" defer></script>
+</body>
+</html>

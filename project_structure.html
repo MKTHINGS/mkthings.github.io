@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast.com Clone Project Structure</title>
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #E50914;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .file-structure {
+            font-family: monospace;
+            white-space: pre;
+        }
+        .file {
+            color: #333;
+        }
+        .directory {
+            color: #E50914;
+            font-weight: bold;
+        }
+        .description {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fast.com Clone Project Structure</h1>
+    
+    <p>This document outlines the recommended project structure for the Fast.com clone project. Follow this structure for proper GitHub Pages deployment.</p>
+    
+    <pre class="file-structure"><span class="directory">project/</span>
+├── <span class="file">index.html</span>                <span class="description"># Main HTML file</span>
+├── <span class="directory">css/</span>                      <span class="description"># CSS stylesheets</span>
+│   └── <span class="file">style.css</span>             <span class="description"># Main stylesheet</span>
+├── <span class="directory">js/</span>                       <span class="description"># JavaScript files</span>
+│   ├── <span class="file">speedtest.js</span>          <span class="description"># Core speed testing functionality</span>
+│   └── <span class="file">language.js</span>           <span class="description"># Language switching functionality</span>
+├── <span class="directory">assets/</span>                   <span class="description"># Static assets</span>
+│   └── <span class="directory">images/</span>               <span class="description"># Images and icons</span>
+├── <span class="directory">locales/</span>                  <span class="description"># Language files</span>
+│   ├── <span class="file">en.json</span>               <span class="description"># English translations</span>
+│   └── <span class="file">it.json</span>               <span class="description"># Italian translations</span>
+└── <span class="file">README.md</span>                 <span class="description"># Documentation and deployment instructions</span></pre>
+
+    <h2>Important Notes for GitHub Pages Deployment</h2>
+    <ul>
+        <li>The <code>index.html</code> file must be at the root of the repository</li>
+        <li>All file paths in HTML, CSS, and JavaScript files should be relative</li>
+        <li>Ensure all files use the correct case sensitivity (GitHub Pages is case-sensitive)</li>
+        <li>The repository should not exceed 1GB in size</li>
+        <li>Follow the deployment instructions in the README.md file</li>
+    </ul>
+</body>
+</html>

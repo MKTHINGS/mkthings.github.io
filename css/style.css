@@ -1,0 +1,306 @@
+/* Base styles and reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #E50914; /* Netflix red */
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: font-size 0.3s ease;
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.language-btn {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.language-btn:hover, .language-btn.active {
+    background-color: #E50914;
+    color: white;
+    border-color: #E50914;
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.speed-test-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Loading spinner */
+.speed-test-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(229, 9, 20, 0.2);
+    border-top: 5px solid #E50914;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Speed test results */
+.speed-test-result {
+    margin-bottom: 30px;
+    cursor: pointer; /* Indicate it's clickable to restart test */
+    transition: transform 0.2s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.speed-test-result:hover {
+    transform: scale(1.02);
+    background-color: rgba(229, 9, 20, 0.05);
+}
+
+.speed-value-container {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    transition: font-size 0.3s ease;
+}
+
+.speed-value {
+    color: #E50914;
+}
+
+.speed-unit {
+    font-size: 2.5rem;
+    color: #666;
+    margin-left: 5px;
+    transition: font-size 0.3s ease;
+}
+
+.speed-label {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.restart-hint {
+    font-size: 0.8rem;
+    color: #999;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.speed-test-result:hover .restart-hint {
+    opacity: 1;
+}
+
+/* More info toggle button */
+.more-info-toggle {
+    margin: 20px 0;
+}
+
+#more-info-btn {
+    background: none;
+    border: none;
+    color: #E50914;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    transition: opacity 0.2s ease;
+}
+
+#more-info-btn:hover {
+    opacity: 0.8;
+}
+
+/* Additional metrics section */
+.additional-metrics {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.additional-metrics.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #E50914;
+}
+
+/* Footer styles */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #E50914;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .speed-value-container {
+        font-size: 4rem;
+    }
+    
+    .speed-unit {
+        font-size: 2rem;
+    }
+    
+    .logo h1 {
+        font-size: 2.2rem;
+    }
+    
+    .metric {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .metric-value {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .speed-value-container {
+        font-size: 3.5rem;
+    }
+    
+    .speed-unit {
+        font-size: 1.8rem;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .loading-text {
+        font-size: 1rem;
+    }
+    
+    .speed-label {
+        font-size: 1rem;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border-width: 4px;
+    }
+}
+
+/* Accessibility improvements */
+button:focus, a:focus {
+    outline: 2px solid #E50914;
+    outline-offset: 2px;
+}
+
+/* Show/hide functionality */
+.show {
+    display: flex;
+}

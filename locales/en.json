@@ -1,0 +1,14 @@
+{
+  "page-title": "MK-Ultra Speed Test",
+  "checking": "Checking MK-Ultra speed...",
+  "mbps": "MKthings",
+  "ms": "ms",
+  "download-speed": "Your MK-Ultra speed",
+  "show-more": "SHOW MORE INFO",
+  "show-less": "SHOW LESS INFO",
+  "upload": "UPLOAD",
+  "latency-unloaded": "LATENCY UNLOADED",
+  "latency-loaded": "LATENCY LOADED",
+  "powered-by": "A clone of",
+  "restart-hint": "(Click to restart test)"
+}

@@ -1,0 +1,14 @@
+{
+  "page-title": "Test di Velocità MK-Ultra",
+  "checking": "Verifica della velocità MK-Ultra...",
+  "mbps": "MKthings",
+  "ms": "ms",
+  "download-speed": "La tua velocità MK-Ultra",
+  "show-more": "MOSTRA PIÙ INFORMAZIONI",
+  "show-less": "MOSTRA MENO INFORMAZIONI",
+  "upload": "UPLOAD",
+  "latency-unloaded": "LATENZA SCARICO",
+  "latency-loaded": "LATENZA CARICO",
+  "powered-by": "Un clone di",
+  "restart-hint": "(Clicca per riavviare il test)"
+}
